@@ -15,7 +15,14 @@ class Calsi {
         return a / b ;
     }
     public int remainder(int a , int b) {
-        return a % b ;
+        try {
+            int re = a % b ;
+            return re ;
+        }
+        catch(ArithmeticException e) {
+            System.out.println("Cannot divide by zero");
+        }
+        return a;
     }
 }
 
