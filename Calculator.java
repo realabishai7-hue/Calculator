@@ -14,6 +14,9 @@ class Calsi {
     public double  div (int a , int b) {
         return a / b ;
     }
+    public int remainder(int a , int b) {
+        return a % b ;
+    }
 }
 
 public class Calculator {
@@ -21,7 +24,7 @@ public class Calculator {
         Scanner sc = new Scanner(System.in);
         Calsi c = new Calsi();
         System.out.println("      ****** Calculator ******\n");
-        System.out.println("1 >> ADDITION\n2 >> SUBTRACTION\n3 >> MULTIPLICATION\n4 >> DIVISION");
+        System.out.println("1 >> ADDITION\n2 >> SUBTRACTION\n3 >> MULTIPLICATION\n4 >> DIVISION\n5 >> MODULOUS");
         System.out.print("Choose option : ");
         int op = sc.nextInt();
         switch (op) {
@@ -52,6 +55,13 @@ public class Calculator {
                 System.out.print("Enter b value : ");
                 int b4 = sc.nextInt();
                 System.out.println(a4 + " / " + b4 + " = " + c.div(a4, b4));
+                break;
+            case 5 :
+                System.out.print("Enter a value : ");
+                int a5 = sc.nextInt();
+                System.out.print("Enter b value : ");
+                int b5 = sc.nextInt();
+                System.out.println(a5 + " % " + b5+ " = " + c.remainder(a5, b5));
                 break;
             default:
                 System.out.println("Enter Valid Input");
